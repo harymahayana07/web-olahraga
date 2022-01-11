@@ -49,7 +49,7 @@ if(!isset($_SESSION['login'])){
                     <a href="../dashboard/index.php">Dashboard</a>
                 </li>
                 <li>
-                    <a href="pasien/data.php">Paket gym</a>
+                    <a href="../paket-gym/data-paket.php">Paket gym</a>
                 </li>
                 <li>
                     <a href="../member/data-member.php">Data Member</a>

@@ -7,14 +7,14 @@ header('location:login.php');
 }
 ?>
     <h3 class="alert alert-info"> Welcome 
-        <?= $_SESSION['fullname'];?> To Website gym
+        <?= $_SESSION['fullname'];?> To paket data Website gym
        
     </h3>
     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
     <?php
        if($_SESSION['role']=='admin'){
        ?>
-    <a href="./tambah-member.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
+    <a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
     <?php 
        }
     ?>

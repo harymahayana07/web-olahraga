@@ -384,11 +384,11 @@ if($query)  {
 }
     ?>
                <form action="" method="post">
-                  <input type="text" name="txtusername" placeholder="Enter username">
-                  <input type="text" name="txtfullname" placeholder="Enter fullname">
+                  <input type="text" name="txtusername" placeholder="Enter username" autocomplete>
+                  <input type="text" name="txtfullname" placeholder="Enter fullname" autocomplete>
                   <input type="password" name="txtpassword" placeholder="Enter password">
-				  <input type="text" name="txtalamat" placeholder="Enter Alamat">
-                  <input type="text" name="no_telp" placeholder="Enter No Hp">
+				  <input type="text" name="txtalamat" placeholder="Enter Alamat" autocomplete>
+                  <input type="text" name="no_telp" placeholder="Enter No Hp" autocomplete>
                   <input type="text" name="role" placeholder="Enter role" hidden>
                  
                   <button type="submit" name="submit" >Submit</button>

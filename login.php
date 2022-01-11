@@ -81,7 +81,7 @@ body {
     <form action="" method="post">
         <h2 class="text-center">Login</h2>       
         <div class="form-group">
-            <input type="text" name="txtusername" class="form-control" placeholder="Username" required="required">
+            <input type="text" name="txtusername" class="form-control" placeholder="Username" required="required" autocomplete>
         </div>
         <div class="form-group">
             <input type="password" name="txtpassword" class="form-control" placeholder="Password" required="required">

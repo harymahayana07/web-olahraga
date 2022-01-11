@@ -1,10 +1,10 @@
 <?php
 require 'conn.php';
 if(isset($_SESSION['user'])) {
-   header('location:../dashboard/index.php');
+   header('location:../web-olahraga/dashboard/index.php');
    
 }else {
-    header('login.php');
+    header('location:../web-olahraga/gym-profil/index.php');
 }
 ?>
 
