@@ -3,11 +3,10 @@
 require '../_header.php';
 
 if(!isset($_SESSION['login'])){
-header('location:login.php');
+header('location:../gym-profil/index.php');
 }
 ?>
-    <h3 class="alert alert-info"> Welcome 
-        <?= $_SESSION['fullname'];?> To Website gym
+    <h3 class="alert alert-info"> Welcome <b><?= $_SESSION['fullname'];?></b> To Data Member Gym
        
     </h3>
     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>

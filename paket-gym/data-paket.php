@@ -3,52 +3,30 @@
 require '../_header.php';
 
 if(!isset($_SESSION['login'])){
-header('location:login.php');
+header('location:../gym-profil/index.php');
 }
 ?>
-    <h3 class="alert alert-info"> Welcome 
-        <?= $_SESSION['fullname'];?> To paket data Website gym
+    <h3 class="alert alert-info"> Welcome <b> <?= $_SESSION['fullname'];?> </b> To Data Paket Gym
        
     </h3>
     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
     <?php
        if($_SESSION['role']=='admin'){
        ?>
-    <a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
+    <a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Paket</a>
     <?php 
        }
     ?>
-    <!-- menambahkan search -->
-<!-- <div class="row">
-    <div class="col-md">
-         <a href="tambah.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
-         <form action="" method="POST">
-         <input type="text" name="txtsearch" class="form-control" placeholder="Search Data Mahasiswa" autofocus autocomplete="off">
-         <button class="btn btn-outline-secondary" name="btnsearch" type="button" ><i class="fas fa-search"></i></button>
-         </form>
-    </div>
-    </div>  -->
-    <!-- <input type="text" name="txtSearch" class="form-control" placeholder="Search Data Mahasiswa">
-    <input type="submit" name="btnCari" class="form-control"> -->
-<!-- <div class="input-group sm-3">
-    <div class="row">
-        <div class="col ">
-        <a href="tambah.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Data </a>
-        </div>
-<div class="col-lg-4">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-  </div> 
-</div>
-</div> -->
+   
     <br><br>
 <table class="table table-dark table-bordered border-primary" >
 <thead>
     <tr>
         <th>No</th>
-        <th>Fullname</th>
-        <th>Alamat</th>
-        <th>No_telp</th>
+        <th>Id_Paket</th>
+        <th>Nama Paket</th>
+        <th>Keterangan</th>
+        <th>Harga</th>
         <?php
        if($_SESSION['role']=='admin'){
        ?>
@@ -60,23 +38,23 @@ header('location:login.php');
     <tbody>
         <?php
         require '../conn.php';
-        $query = "SELECT * FROM tb_user";
+        $query = "SELECT * FROM tb_paket";
         $sql = mysqli_query($koneksi,$query);
         $no = 1;
         while ($data = mysqli_fetch_object($sql)) {
         ?>
         <tr>
         <td><?= $no++; ?></td>
-        <td><?= $data->fullname; ?></td>
-        <td><?= $data->alamat; ?></td>
-
-        <td><?= $data->no_telp; ?></td>
+        <td><?= $data->id_paket; ?></td>
+        <td><?= $data->nama_paket; ?></td>
+        <td><?= $data->ket_paket; ?></td>
+        <td>Rp.<?= $data->harga_paket; ?></td>
         <?php
        if($_SESSION['role']=='admin'){
        ?>
-       <td><a href="edit-member.php?url-id=<?=$data->id_user;?>">
+       <td><a href="edit-paket.php?url-id=<?=$data->id_paket;?>">
        <input type="submit" value="Edit" class="btn btn-warning" >
-    </a> <a href="hapus-member.php?id_user=<?= $data->id_user;?>">
+    </a> <a href="hapus-paket.php?id_paket=<?= $data->id_paket;?>">
        <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
        <?php 
        }

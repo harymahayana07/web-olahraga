@@ -5,15 +5,15 @@ if(!isset($_SESSION['login'])){
 }
 ?>
 <?php
-if (isset($_GET['id_user'])){
+if (isset($_GET['id_paket'])){
 require '../conn.php';
 
-$id = $_GET['id_user'];
-$query="DELETE FROM tb_user WHERE id_user = '$id'";
+$id = $_GET['id_paket'];
+$query="DELETE FROM tb_paket WHERE id_paket = '$id'";
 $result = mysqli_query($koneksi,$query);
 
 if($result) {
-     header('location:data-member.php');
+     header('location:data-paket.php');
      
 } else {
     echo 'Data Gagal Terhapus'.mysqli_error($koneksi);

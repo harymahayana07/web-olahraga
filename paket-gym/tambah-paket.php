@@ -5,13 +5,13 @@ require '../_header.php';
 	
 		<div class="pull-right">
 			<a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-			<a href="../member/data-member.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
+			<a href="../paket-gym/data-paket.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
 		</div>
 	  </h4>
 	      <div class="row">
 	  	     <div class="col-lg-6 col-lg-offset-3">
                    <!--  -->
-                   <h3 class="alert alert-info"> Tambah Data Member</h3>
+                   <h3 class="alert alert-info"> Tambah Data Paket Gym</h3>
         <!--  -->
         <?php
 if(!isset($_SESSION['login'])){
@@ -23,17 +23,16 @@ if(!isset($_SESSION['login'])){
 require '../conn.php';
 //menambahkan htmlspecialchars
     if(isset($_POST['simpan'])){
-        $txtusername = htmlspecialchars($_POST['txtusername']);
-        $txtfullname = htmlspecialchars($_POST['txtfullname']);
-        $txtpassword = sha1(htmlspecialchars($_POST['txtpassword']));
-        $txtalamat = htmlspecialchars($_POST['txtalamat']);
-        $no_telp = htmlspecialchars($_POST['no_telp']);
-        $role = htmlspecialchars($_POST['role']);
-$sql = "INSERT INTO tb_user VALUES (NULL,'$txtusername','$txtfullname','$txtpassword','$txtalamat','$no_telp','$role')";
+        $txtid_paket = htmlspecialchars($_POST['txtid_paket']);
+        $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
+        $txtket_paket = htmlspecialchars($_POST['txtket_paket']);
+        $txtharga_paket = htmlspecialchars($_POST['txtharga_paket']);
+       
+$sql = "INSERT INTO tb_paket VALUES ('$txtid_paket','$txtnama_paket','$txtket_paket','$txtharga_paket')";
 $query = mysqli_query($koneksi,$sql);
 
 if($query)  {
-    header('location:data-member.php');
+    header('location:data-paket.php');
 }else {
     echo 'Query Error'. mysqli_error($koneksi);
 }
@@ -43,31 +42,21 @@ if($query)  {
 
 	  		<form action="" method="post">
 	  			<div class="form-group">
-	  				<label for="username">Username</label>
-	  				<input type="text" name="txtusername" id="username" class="form-control" required autofocus>
+	  				<label for="id_paket">Id Paket</label>
+	  				<input type="text" name="txtid_paket" id="id_paket" class="form-control" required autofocus>
 	  			</div>
 	  			<div class="form-group">
-	  				<label for="fullname">Fullname</label>
-	  				<input type="text" name="txtfullname" id="fullname" class="form-control" required>
+	  				<label for="nama_paket">Nama Paket</label>
+	  				<input type="text" name="txtnama_paket" id="nama_paket" class="form-control" required>
 	  			</div>
-                  <div class="form-group">
-	  				<label for="password">Password</label>
-	  				<input type="password" name="txtpassword" id="password" class="form-control" required>
+                 
+	  			<div class="form-group">
+	  				<label for="ket_paket">Keterangan Paket</label>
+	  				<textarea name="txtket_paket" id="ket_paket" class="form-control" required></textarea>
 	  			</div>
 	  			<div class="form-group">
-	  				<label for="alamat">Alamat</label>
-	  				<textarea name="txtalamat" id="alamat" class="form-control" required></textarea>
-	  			</div>
-	  			<div class="form-group">
-	  				<label for="telp">No. Telepon</label>
-	  				<input type="number" name="no_telp" id="telp" class="form-control" required>
-	  			</div>
-                  <div class="form-group">
-	  				<label for="role">Role : </label>
-                      <select name="role" id="role">
-                                 <option value="admin">Admin</option>
-                                 <option value="member">Member</option>
-                    </select>
+	  				<label for="harga">Harga Paket</label>
+	  				<input type="text" name="txtharga_paket" id="harga" class="form-control" required>
 	  			</div>
 
 	  			<div class="form-group pull-right">

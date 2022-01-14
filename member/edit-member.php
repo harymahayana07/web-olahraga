@@ -32,7 +32,6 @@ if(!isset($_SESSION['login'])){
                     $input_id = $_POST['txtid'];
                     $txtusername = htmlspecialchars($_POST['txtusername']);
                     $txtfullname = htmlspecialchars( $_POST['txtfullname']);
-                  
                     $alamat = htmlspecialchars($_POST['alamat']);
                     $no_telp = htmlspecialchars($_POST['no_telp']);
                     $role = htmlspecialchars($_POST['role']);

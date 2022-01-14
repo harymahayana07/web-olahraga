@@ -11,75 +11,64 @@ if(!isset($_SESSION['login'])){
 	 
 		<div class="pull-right">
 			<a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-			<a href="data-member.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
+			<a href="data-paket.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
 		</div>
 	 
 	      <div class="row">
 	  	     <div class="col-lg-6 col-lg-offset-3">
-               <h3 class="alert alert-info"> Edit Data Member</h3>
+               <h3 class="alert alert-info"> Edit Data Paket</h3>
                <?php
     require '../conn.php';
         //menampilan data dalam table
         if(isset($_GET['url-id'])){
             $input_id = $_GET['url-id'];
-            $query = "SELECT * FROM tb_user WHERE id_user ='$input_id'";
+            $query = "SELECT * FROM tb_paket WHERE id_paket ='$input_id'";
             $result = mysqli_query($koneksi,$query);
             $data = mysqli_fetch_object($result);
 
         }
         //simpan data yang telah dirubah dalam table
-       if(isset($_POST['simpan'])){
-                    $input_id = $_POST['txtid'];
-                    $txtusername = htmlspecialchars($_POST['txtusername']);
-                    $txtfullname = htmlspecialchars( $_POST['txtfullname']);
-                  
-                    $alamat = htmlspecialchars($_POST['alamat']);
-                    $no_telp = htmlspecialchars($_POST['no_telp']);
-                    $role = htmlspecialchars($_POST['role']);
+        if(isset($_POST['simpan'])){
+          $id_paket = $_POST['txtid_paket'];
+          $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
+          $txtket_paket = htmlspecialchars($_POST['txtket_paket']);
+          $txtharga_paket = htmlspecialchars($_POST['txtharga_paket']);
         //update syntax dalam mysql
-                 $sql = "UPDATE tb_user SET 
-                         username='$txtusername', fullname='$txtfullname', alamat='$alamat',no_telp='$no_telp', role='$role'
-                         WHERE id_user = '$input_id'";
+                 $sql = "UPDATE tb_paket SET 
+                        id_paket='$id_paket', nama_paket='$txtnama_paket', ket_paket='$txtket_paket', harga_paket='$txtharga_paket'
+                         WHERE id_paket = '$id_paket'";
                  $result = mysqli_query($koneksi,$sql);
         //perulangan jika dia berhasil maka ke index dan data diperbarui
                 if($result)  {
-                  header('location:../member/data-member.php');
+                  header('location:../paket-gym/data-paket.php');
       //jika salah data tidak berhasil diperbarui dan menghasilkan error
                 }else {
                   echo 'Query Error'. mysqli_error($koneksi);
                 }
                 }
               ?>
-	  		<form action="" method="post">
-	  				<input type="hidden" name="txtid" id="username" class="form-control" value="<?=$data->id_user;?>" >
-	  		    <div class="form-group">
-	  				<label for="username">Username</label>
-	  				<input type="text" name="txtusername" id="username" class="form-control" value="<?=$data->username;?>">
-	  			</div>
-	  			<div class="form-group">
-	  				<label for="fullname">Fullname</label>
-	  				<input type="text" name="txtfullname" id="fullname" class="form-control" value="<?=$data->fullname;?>">
-	  			</div>
-	  				
-	  			<div class="form-group">
-	  				<label for="alamat">Alamat</label>
-	  				<textarea name="alamat" id="alamat" class="form-control"><?=$data->alamat;?></textarea>
-	  			</div>
-	  			<div class="form-group">
-	  				<label for="telp">No. Telepon</label>
-	  				<input type="text" name="no_telp" id="telp" class="form-control" value="<?=$data->no_telp;?>">
-	  			</div>
-                  <div class="form-group">
-	  				<label for="role">Role : </label>
 
-                      <select name="role" id="cars" class="form-control">
-                     <option value="<?=$data->role;?>"><?=$data->role;?></option>
-                    </select>
-                     
-                     
+	  <form action="" method="post">
+	  			<div class="form-group">
+	  				<label for="id_paket">Id Paket</label>
+	  				<input type="text" name="txtid_paket" id="id_paket" class="form-control" value="<?=$data->id_paket;?>">
 	  			</div>
+	  			<div class="form-group">
+	  				<label for="nama_paket">Nama Paket</label>
+	  				<input type="text" name="txtnama_paket" id="nama_paket" class="form-control" value="<?=$data->nama_paket;?>">
+	  			</div>
+                 
+	  			<div class="form-group">
+	  				<label for="ket_paket">Keterangan Paket</label>
+	  				<textarea name="txtket_paket" id="ket_paket" class="form-control" ><?=$data->ket_paket;?></textarea>
+	  			</div>
+	  			<div class="form-group">
+	  				<label for="harga">Harga Paket</label>
+	  				<input type="text" name="txtharga_paket" id="harga" class="form-control" value="Rp.<?=$data->harga_paket;?>">
+	  			</div>
+
 	  			<div class="form-group pull-right">
-	  				<input type="submit" name="simpan" value="Simpan Perubahan" class="btn btn-success">
+	  				<input type="submit" name="simpan" value="Simpan" class="btn btn-success">
 	  			
 	  					</div>
 	  				</form>

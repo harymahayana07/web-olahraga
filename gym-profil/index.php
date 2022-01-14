@@ -209,7 +209,7 @@
 <!-- End Start Today -->
 
 <!-- Start Schedule -->
-  <section class="schedule" id="schedule">
+  <!-- <section class="schedule" id="schedule">
   	 <div class="container">
   	 	  <div class="content">
   	 	  	   <div class="box text wow slideInLeft">
@@ -263,7 +263,7 @@
   	 	  	   </div>
   	 	  </div>
   	 </div>
-  </section>
+  </section> -->
 <!-- End Schedule -->
 
 <!-- Start Gallery -->
@@ -292,6 +292,10 @@
   	 	  <h2>Choose Your Package</h2>
   	 	  <p class="title-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
   	 	  <div class="content">
+
+			 <!-- bikin div kelas row lebih dari 4 bikin row baru -->
+			 <!-- munculkan box , berisi price dari harga_paket ,id dan nama paket , keterangan paket -->
+				 <!-- kelas box -->
   	 	  	  <div class="box wow bounceInUp">
   	 	  	  	  <div class="inner">
   	 	  	  	  	   <div class="price-tag">
@@ -311,6 +315,7 @@
   	 	  	  	  	   </div>
   	 	  	  	  </div>
   	 	  	  </div>
+				   <!-- end box  -->
   	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
   	 	  	  	  <div class="inner">
   	 	  	  	  	   <div class="price-tag">
