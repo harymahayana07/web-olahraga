@@ -29,14 +29,14 @@ if(!isset($_SESSION['login'])){
         }
         //simpan data yang telah dirubah dalam table
         if(isset($_POST['simpan'])){
-          $id_paket = $_POST['txtid_paket'];
+          $input_id = htmlspecialchars($_POST['txtid_paket']);
           $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
           $txtket_paket = htmlspecialchars($_POST['txtket_paket']);
           $txtharga_paket = htmlspecialchars($_POST['txtharga_paket']);
         //update syntax dalam mysql
                  $sql = "UPDATE tb_paket SET 
-                        id_paket='$id_paket', nama_paket='$txtnama_paket', ket_paket='$txtket_paket', harga_paket='$txtharga_paket'
-                         WHERE id_paket = '$id_paket'";
+                        id_paket='$input_id', nama_paket='$txtnama_paket', ket_paket='$txtket_paket', harga_paket='$txtharga_paket'
+                         WHERE id_paket = '$input_id'";
                  $result = mysqli_query($koneksi,$sql);
         //perulangan jika dia berhasil maka ke index dan data diperbarui
                 if($result)  {

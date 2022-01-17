@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hary Gym</title>
+	<title>HARY GYM</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../gym-profil/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="../gym-profil/css/style.css">
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
   <style>
     .wow:first-child {
       visibility: hidden;
@@ -14,15 +15,14 @@
   
 </head>
 <body>
- 
  <!-- Start Header  -->
  <header>
  	 <div class="container">
  	 	<div class="logo">
- 	 		 <a href="">Fitness <span>Club</span></a>
+ 	 		 <a href="">HARY <span>GYM</span></a>
  	 	</div>
 		  <a href="../login.php" class="btn btn-primary">Login</a>
- 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	 		<a href="javascript:void(0)" class="ham-burger">
  	       <span></span>	
  	       <span></span>
  	 	</a>
@@ -30,7 +30,6 @@
  	 		<ul>
  	 			<li><a href="#home">Home</a></li>
  	 			<li><a href="#about">About</a></li>
- 	 			<li><a href="#schedule">Schedule</a></li>
  	 			<li><a href="#price">Price</a></li>
  	 			<li><a href="#contact">Contact</a></li>
  	 		</ul>
@@ -49,6 +48,7 @@
   </section>
   <!-- End Home -->
 
+  
 
  <!-- Start About -->
   <section class="about" id="about">
@@ -92,112 +92,14 @@
   </section>
  <!-- End About -->
 
-
- <!-- Start Service -->
- <!-- <section class="service" id="service">
- 	<div class="container">
- 		 <div class="content">
- 		 	  <div class="text box wow slideInLeft">
-                  <h2>Services</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                  <a href="" class="btn">Start Now</a>
- 		 	  </div>
- 		 	  <div class="accordian box wow slideInRight">
- 		 	  	    <div class="accordian-container active">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Cardiovascular Equipment</h4>
- 		 	  	    		<span class="fa fa-angle-down"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Strength Training Equipment</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Group Fitness Class</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Other Services</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  </div>
- 		 </div>
- 	</div>
- </section> -->
- <!-- End Service -->
-
-<!-- Start Classes -->
-<!-- <section class="classes" id="classes">
-	<div class="container">
-		 <div class="content">
-		 	  <div class="box img wow slideInLeft">
-		 	  	 <img src="images/class2.png" alt="classes" />
-		 	  </div>
-		 	  <div class="box text wow slideInRight">
-		 	  	 <h2>Our Classes</h2>
-		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-		 	  	<div class="class-items">
-		 	  	 <div class="item wow bounceInUp">
-                     <div class="item-img">
-                     	 <img src="images/class1.jpg" alt="classes" />
-                     	 <div class="price">
-                     	 	 $99
-                     	 </div>
-                     </div>
-                     <div class="item-text">
-                     	  <h4>Stretching Training</h4>
-                     	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                     	  <a href="">Get Details</a>
-                     </div>
-		 	  	 </div>
-		 	  	 <div class="item wow bounceInUp">
-                     <div class="item-text">
-                     	  <h4>Stretching Training</h4>
-                     	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                     	  <a href="">Get Details</a>
-                     </div>
-                     <div class="item-img">
-                     	 <img src="images/class1.jpg" alt="classes" />
-                     	 <div class="price">
-                     	 	 $99
-                     	 </div>
-                     </div>
-		 	  	 </div>
-		 	  	</div>
-		 	  </div>
-		 </div>
-	</div>
-</section> -->
-<!-- End Classes -->
-
 <!-- Start Today -->
  <section class="start-today">
  	<div class="container">
  		 <div class="content">
  		 	  <div class="box text wow slideInLeft">
- 		 	  	 <h2>Start Your Training Today</h2>
+				<h2>Mulai Pelatihan Kamu Hari Ini </h2>
  		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
- 		 	  	 <a href="" class="btn">Start Now</a>
+ 		 	  	 <a href="#contact" class="btn">Mulai Sekarang</a>
  		 	  </div>
  		 	  <div class="box img wow slideInRight">
  		 	  	 <img src="images/gallery4.jpg" alt="start today" />
@@ -208,95 +110,58 @@
  </section>
 <!-- End Start Today -->
 
-<!-- Start Schedule -->
-  <!-- <section class="schedule" id="schedule">
-  	 <div class="container">
-  	 	  <div class="content">
-  	 	  	   <div class="box text wow slideInLeft">
-  	 	  	   	   <h2>Classes Schedule</h2>
-  	 	  	   	   <p>
-  	 	  	   	   	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-  	 	  	   	   </p>
-  	 	  	   	   <img src="images/schedule1.png" alt="schedule" />
-  	 	  	   </div>
-  	 	  	   <div class="box timing wow slideInRight">
-                   <table class="table">
-                   	 <tbody>
-                   	 	<tr>
-                   	 		<td class="day">Monday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Tuesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Wednesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Thursday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Friday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 	<tr>
-                   	 		<td class="day">Saturday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
-                   	 	</tr>
-                   	 </tbody>
-                   </table>
-  	 	  	   </div>
-  	 	  </div>
-  	 </div>
-  </section> -->
-<!-- End Schedule -->
 
-<!-- Start Gallery -->
-  <!-- <section class="gallery" id="gallery">
-  	 <h2>Workout Gallery</h2>
-  	<div class="content">
-  		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery1.jpg" alt="gallery" />
-  		 </div>
-  		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery2.jpg" alt="gallery" />
-  		 </div>
-  		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery3.jpg" alt="gallery" />
-  		 </div>
-  		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery4.jpg" alt="gallery" />
-  		 </div>
-  	</div>
-  </section> -->
-<!-- End Gallery -->
-
- <!-- Start Price -->
+ <!-- Start Paket -->
   <section class="price-package" id="price">
   	 <div class="container">
-  	 	  <h2>Choose Your Package</h2>
-  	 	  <p class="title-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+  	 	  <h2>Pilih Paketmu Sekarang !</h2>
   	 	  <div class="content">
-
 			 <!-- bikin div kelas row lebih dari 4 bikin row baru -->
+			 <!-- <div class="box">
+				 <div class="row mb-3"> -->
+				
+				 <div class="row">
+  
+				</div>
+				
+		<?php
+					// ambil koneksi
+				require '../conn.php';
+					// ambil isi/check data dari tb paket
+				$query = "SELECT * FROM tb_paket";
+				$sql = mysqli_query($koneksi,$query);
+					// perulangan untuk memunculkan banyak paket
+				while ($data = mysqli_fetch_object($sql)) {
+				?>
+				<!-- munculkan perulangan dengan card -->
+				<div class="col-6 col-md-4">
+				<p><?=$data->harga_paket;?></p>
+				<div class="card" style="width: 20rem; border-radius: 10px;">
+						<img src="../assets/img/<?=$data->gambar;?>" class="card-img-top" style="height: 13rem;">
+				
+				<div class="card-body">
+						<h5 class="card-title"><?=$data->nama_paket;?></h5>
+						<p class="card-text"><?=$data->ket_paket;?></p>
+				</div>
+				<div class="card-footer text-muted">
+						<p><?=$data->id_paket;?></p>
+				</div>
+				</div>
+			</div>
+		<?php
+		}
+		?>
+<!--  -->
+</div>
+</div>
+</div>
+
+</div>
+</section> 
+	
 			 <!-- munculkan box , berisi price dari harga_paket ,id dan nama paket , keterangan paket -->
 				 <!-- kelas box -->
-  	 	  	  <div class="box wow bounceInUp">
+  	 	  	  <!-- <div class="box wow bounceInUp">
   	 	  	  	  <div class="inner">
   	 	  	  	  	   <div class="price-tag">
   	 	  	  	  	   	  Rp.50.000/Bulan
@@ -314,9 +179,9 @@
   	 	  	  	  	   	  <a href="#contact" class="btn">Join Now</a>
   	 	  	  	  	   </div>
   	 	  	  	  </div>
-  	 	  	  </div>
+  	 	  	  </div> -->
 				   <!-- end box  -->
-  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
+  	 	  	  <!-- <div class="box wow bounceInUp" data-wow-delay="0.2s">
   	 	  	  	  <div class="inner">
   	 	  	  	  	   <div class="price-tag">
   	 	  	  	  	   	  Rp.75.000/bulan
@@ -356,38 +221,41 @@
   	 	  	  </div>
   	 	  </div>
   	 </div>
-  </section>
- <!-- End Price -->
+ 
+ <-- End Price -->
 
- <!-- Start Contact -->
+ <!-- Start Registrasi Member -->
   <section class="contact" id="contact">
      <div class="container">
         <div class="content">
 			
             <div class="box form wow slideInLeft">
-				<h5>Registrasi Member</h5>
-<?php
-require '../conn.php';
+				<?php
+					// ambil koneksi
+						require '../conn.php';
 
-//menambahkan htmlspecialchars
+					//menambahkan htmlspecialchars
 
-    if(isset($_POST['submit'])){
-        $txtusername = htmlspecialchars($_POST['txtusername']);
-        $txtfullname = htmlspecialchars($_POST['txtfullname']);
-        $txtpassword = sha1(htmlspecialchars($_POST['txtpassword']));
-        $txtalamat = htmlspecialchars($_POST['txtalamat']);
-        $no_telp = htmlspecialchars($_POST['no_telp']);
-        $role = htmlspecialchars($_POST['role']='member');
-$sql = "INSERT INTO tb_user VALUES (NULL,'$txtusername','$txtfullname','$txtpassword','$txtalamat','$no_telp','$role')";
-$query = mysqli_query($koneksi,$sql);
+  				  if(isset($_POST['submit'])){
+    				    $txtusername = htmlspecialchars($_POST['txtusername']);
+    				    $txtfullname = htmlspecialchars($_POST['txtfullname']);
+						$txtpassword = sha1(htmlspecialchars($_POST['txtpassword']));
+						$txtalamat = htmlspecialchars($_POST['txtalamat']);
+						$no_telp = htmlspecialchars($_POST['no_telp']);
+						$role = htmlspecialchars($_POST['role']='member');
+					// masukan ke database
+					$sql = "INSERT INTO tb_user VALUES 
+					(NULL,'$txtusername','$txtfullname','$txtpassword','$txtalamat','$no_telp','$role')";
 
-if($query)  {
-    header('location:../gym-profil/index.php');
-}else {
-    echo 'Query Error'. mysqli_error($koneksi);
-}
-}
-    ?>
+					$query = mysqli_query($koneksi,$sql);
+					//jika berhasil arahkan ke gym-profil-index		
+					if($query)  {
+  					  header('location:../gym-profil/index.php');
+					}else {
+ 					   echo 'Query Error'. mysqli_error($koneksi);
+					}
+					}
+ 			   ?>
                <form action="" method="post">
                   <input type="text" name="txtusername" placeholder="Enter username" autocomplete>
                   <input type="text" name="txtfullname" placeholder="Enter fullname" autocomplete>
@@ -400,13 +268,13 @@ if($query)  {
                </form>
             </div>
             <div class="box text wow slideInRight">
-                 <h2>Get Connected with Gym</h2>
-                  <p class="title-p"> Isi biodata di samping jika Anda Tertarik dengan kami</p>
+                 <h2>Yuk Gabung Dengan Hary Gym Sekarang !</h2>
+                  <p class="title-p"> Isi biodata di samping untuk melakukan Registrasi Member</p>
                   <div class="info">
                       <ul>
-                          <li><span class="fa fa-map-marker"></span> jl. lalu mesir no.10 cakranegara</li>
-                          <li><span class="fa fa-phone"></span> 0878515123412</li>
-                          <li><span class="fa fa-envelope"></span> Fitness Gym Club</li>
+                          <li><span class="fa fa-map-marker"></span> Alamat : jl. lalu mesir no.10 cakranegara</li>
+                          <li><span class="fa fa-phone"></span> No.telp : 0878515123412</li>
+                          <li><span class="fa fa-envelope"></span> BUILD YOUR FIT BODY NOW IN HARY GYM</li>
                       </ul>
                   </div>
             </div>
@@ -415,11 +283,10 @@ if($query)  {
   </section>
  <!-- End Contact -->
 
-
-
  <!-- jquery -->
 
  <script src="../gym-profil/js/jquery.min.js"></script>
+ <!-- function js untuk membuat tampilan interaktif -->
 <script>
 	$(document).ready(function(){
 
@@ -468,7 +335,7 @@ if($query)  {
       }
     );
     wow.init();
-  </script>
+</script>
 </body>
 </html>
 
