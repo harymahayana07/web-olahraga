@@ -6,6 +6,3 @@ if(isset($_SESSION['user'])) {
 }else {
     header('location:../web-olahraga/gym-profil/index.php');
 }
-?>
-
- 

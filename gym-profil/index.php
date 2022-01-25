@@ -1,346 +1,206 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>HARY GYM</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../gym-profil/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="../gym-profil/css/style.css">
+<html lang="en">
 
-	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HARY GYM</title>
+  <link rel="stylesheet" href="../assets/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="../assets/js/jquery.js"></script>
+  <!--  -->
   <style>
-    .wow:first-child {
-      visibility: hidden;
+    .navbar {
+      background-color: #18212b;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
     }
   </style>
-  
 </head>
-<body>
- <!-- Start Header  -->
- <header>
- 	 <div class="container">
- 	 	<div class="logo">
- 	 		 <a href="">HARY <span>GYM</span></a>
- 	 	</div>
-		  <a href="../login.php" class="btn btn-primary">Login</a>
- 	 		<a href="javascript:void(0)" class="ham-burger">
- 	       <span></span>	
- 	       <span></span>
- 	 	</a>
- 	 	<div class="nav">
- 	 		<ul>
- 	 			<li><a href="#home">Home</a></li>
- 	 			<li><a href="#about">About</a></li>
- 	 			<li><a href="#price">Price</a></li>
- 	 			<li><a href="#contact">Contact</a></li>
- 	 		</ul>
- 	 	</div>
- 	 </div>
- </header>
- <!-- End Header  -->
 
-  <!-- Start Home -->
-  <section class="home wow flash" id="home">
-  	 <div class="container">
-  	 	  <h1 class="wow slideInLeft" data-wow-delay="1s">It's <span>gym</span> time. Let's go</h1>
-  	 	  <h1 class="wow slideInRight" data-wow-delay="1s">We are ready to <span>fit you</span></h1>
-  	 </div>
-  	 
-  </section>
-  <!-- End Home -->
+<body style="background-color:#18212b ;">
+  <div class="container-fluid" style="height: 65px;background-color: #18212b;">
 
-  
-
- <!-- Start About -->
-  <section class="about" id="about">
-  	  <div class="container">
-  	  	  <div class="content">
-  	  	  	   <div class="box wow bounceInUp">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about1.jpg" alt="about" />
-  	  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Free Consultation</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  	   	<div class="box wow bounceInUp" data-wow-delay="0.2s">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about2.jpg" alt="about" />
-  	  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Best Training</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  	   <div class="box wow bounceInUp" data-wow-delay="0.4s">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about3.jpg" alt="about" />
-  	  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Build Perfect Body</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  </div>
-  	  </div>
-  </section>
- <!-- End About -->
-
-<!-- Start Today -->
- <section class="start-today">
- 	<div class="container">
- 		 <div class="content">
- 		 	  <div class="box text wow slideInLeft">
-				<h2>Mulai Pelatihan Kamu Hari Ini </h2>
- 		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
- 		 	  	 <a href="#contact" class="btn">Mulai Sekarang</a>
- 		 	  </div>
- 		 	  <div class="box img wow slideInRight">
- 		 	  	 <img src="images/gallery4.jpg" alt="start today" />
- 		 	  </div>
-
- 		 </div>
- 	</div>
- </section>
-<!-- End Start Today -->
-
-
- <!-- Start Paket -->
-  <section class="price-package" id="price">
-  	 <div class="container">
-  	 	  <h2>Pilih Paketmu Sekarang !</h2>
-  	 	  <div class="content">
-			 <!-- bikin div kelas row lebih dari 4 bikin row baru -->
-			 <!-- <div class="box">
-				 <div class="row mb-3"> -->
-				
-				 <div class="row">
-  
-				</div>
-				
-		<?php
-					// ambil koneksi
-				require '../conn.php';
-					// ambil isi/check data dari tb paket
-				$query = "SELECT * FROM tb_paket";
-				$sql = mysqli_query($koneksi,$query);
-					// perulangan untuk memunculkan banyak paket
-				while ($data = mysqli_fetch_object($sql)) {
-				?>
-				<!-- munculkan perulangan dengan card -->
-				<div class="col-6 col-md-4">
-				<p><?=$data->harga_paket;?></p>
-				<div class="card" style="width: 20rem; border-radius: 10px;">
-						<img src="../assets/img/<?=$data->gambar;?>" class="card-img-top" style="height: 13rem;">
-				
-				<div class="card-body">
-						<h5 class="card-title"><?=$data->nama_paket;?></h5>
-						<p class="card-text"><?=$data->ket_paket;?></p>
-				</div>
-				<div class="card-footer text-muted">
-						<p><?=$data->id_paket;?></p>
-				</div>
-				</div>
-			</div>
-		<?php
-		}
-		?>
-<!--  -->
-</div>
-</div>
-</div>
-
-</div>
-</section> 
-	
-			 <!-- munculkan box , berisi price dari harga_paket ,id dan nama paket , keterangan paket -->
-				 <!-- kelas box -->
-  	 	  	  <!-- <div class="box wow bounceInUp">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  Rp.50.000/Bulan
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price1.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Body Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="#contact" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div> -->
-				   <!-- end box  -->
-  	 	  	  <!-- <div class="box wow bounceInUp" data-wow-delay="0.2s">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  Rp.75.000/bulan
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price2.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Arm Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="#contact" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.4s">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  Rp.150.000/Bulan
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price3.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>All Body Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="#contact" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  </div>
-  	 </div>
- 
- <-- End Price -->
-
- <!-- Start Registrasi Member -->
-  <section class="contact" id="contact">
-     <div class="container">
-        <div class="content">
-			
-            <div class="box form wow slideInLeft">
-				<?php
-					// ambil koneksi
-						require '../conn.php';
-
-					//menambahkan htmlspecialchars
-
-  				  if(isset($_POST['submit'])){
-    				    $txtusername = htmlspecialchars($_POST['txtusername']);
-    				    $txtfullname = htmlspecialchars($_POST['txtfullname']);
-						$txtpassword = sha1(htmlspecialchars($_POST['txtpassword']));
-						$txtalamat = htmlspecialchars($_POST['txtalamat']);
-						$no_telp = htmlspecialchars($_POST['no_telp']);
-						$role = htmlspecialchars($_POST['role']='member');
-					// masukan ke database
-					$sql = "INSERT INTO tb_user VALUES 
-					(NULL,'$txtusername','$txtfullname','$txtpassword','$txtalamat','$no_telp','$role')";
-
-					$query = mysqli_query($koneksi,$sql);
-					//jika berhasil arahkan ke gym-profil-index		
-					if($query)  {
-  					  header('location:../gym-profil/index.php');
-					}else {
- 					   echo 'Query Error'. mysqli_error($koneksi);
-					}
-					}
- 			   ?>
-               <form action="" method="post">
-                  <input type="text" name="txtusername" placeholder="Enter username" autocomplete>
-                  <input type="text" name="txtfullname" placeholder="Enter fullname" autocomplete>
-                  <input type="password" name="txtpassword" placeholder="Enter password">
-				  <input type="text" name="txtalamat" placeholder="Enter Alamat" autocomplete>
-                  <input type="text" name="no_telp" placeholder="Enter No Hp" autocomplete>
-                  <input type="text" name="role" placeholder="Enter role" hidden>
-                 
-                  <button type="submit" name="submit" >Submit</button>
-               </form>
-            </div>
-            <div class="box text wow slideInRight">
-                 <h2>Yuk Gabung Dengan Hary Gym Sekarang !</h2>
-                  <p class="title-p"> Isi biodata di samping untuk melakukan Registrasi Member</p>
-                  <div class="info">
-                      <ul>
-                          <li><span class="fa fa-map-marker"></span> Alamat : jl. lalu mesir no.10 cakranegara</li>
-                          <li><span class="fa fa-phone"></span> No.telp : 0878515123412</li>
-                          <li><span class="fa fa-envelope"></span> BUILD YOUR FIT BODY NOW IN HARY GYM</li>
-                      </ul>
-                  </div>
-            </div>
+  </div>
+  <!-- section nav -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <!-- letakkan image hary gym -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo_web-gym.jpg" style="border-radius: 150px; height: 40px; width: 40px;" alt="hary_gym">
+          <span><b> WEB HARY GYM </b></span>
+        </a>
+        <!-- end img -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registrasi-member.php">Daftar Member</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <a href="../login.php" class="btn btn-primary active">Login</a>
+          </form>
         </div>
-     </div>
+      </div>
+    </nav>
+  </div>
+  <!-- end nav -->
+  <!-- section carousel -->
+  <section class="container-fluid" style="background-color:#18212b;">
+    <div class="row">
+      <div class="col-lg-8 py-1" style="margin: auto;">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../assets/img/carousel1.jpg" class="d-block w-100" style="height: 510px; border-radius:20px;" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Build Perfect Body</h5>
+                <p>Raih badan impianmu disini dengan penawaran paket impian.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/carousel2.jpg" class="d-block w-100" style="height: 510px; border-radius:20px;" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Best Training</h5>
+                <p>Tempat dengan pelatihan terbaik yang ada di mataram.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/carousel3.jpg" class="d-block w-100" style="height: 510px; border-radius:20px;" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Free Konsultasi</h5>
+                <p>Konsultasi apapun akan dilayani oleh mentor-mentor yang ahli dibidangnya.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-10 py-2" style="margin: auto;">
+
+        <p style="color: white;text-align: justify;"><b>Hary Gym</b> Adalah sebuah Tempat Kebugaran yang
+          banyak sekali diminati baik kalangan remaja maupun dewasa untuk dijadikan sebagai tempat
+          melakukan kegiatan latihan kebugaran sseperti senam , atletik ataupun kardio. Pada Hary gym
+          atau pusat kebugaran golongan satu ini terdapat fasilitas berupa area fitness serta area senam.
+          Tempat ini juga memiliki akses wifi dan memiliki tampilan elegan serta desain interiornya
+          memiliki desain khusus sehingga diminati oleh kalangan remaja saat ini di mataram.
+        </p>
+      </div>
+
+    </div>
   </section>
- <!-- End Contact -->
+  <!-- end carousel -->
 
- <!-- jquery -->
 
- <script src="../gym-profil/js/jquery.min.js"></script>
- <!-- function js untuk membuat tampilan interaktif -->
-<script>
-	$(document).ready(function(){
+  <!-- Start Paket -->
+  <section style="background-color: whitesmoke;">
+    <div class="container">
+      <div class="row mb-3 py-2">
+        <div class="col-md-12" style="margin: auto;">
+          <h2 style="text-align: center; color: black;">Daftar Paket Kami</h2>
+          <hr>
+          <div class="row">
+            <!--  -->
+            <?php
+            // ambil koneksi
+            require '../conn.php';
+            // ambil isi/check data dari tb paket
+            $query = "SELECT * FROM tb_paket";
+            $sql = mysqli_query($koneksi, $query);
+            // perulangan untuk memunculkan banyak paket
+            while ($data = mysqli_fetch_object($sql)) {
+            ?>
+              <!-- munculkan perulangan dengan card -->
 
-      $(".ham-burger, .nav ul li a").click(function(){
-       
-        $(".nav").toggleClass("open")
+              <div class="col-md-3" style="margin-bottom: 20px;">
 
-        $(".ham-burger").toggleClass("active");
-      })      
-      $(".accordian-container").click(function(){
-      	$(".accordian-container").children(".body").slideUp();
-      	$(".accordian-container").removeClass("active")
-      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
-      	$(this).children(".body").slideDown();
-      	$(this).addClass("active")
-      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
-      })
 
-       $(".nav ul li a, .go-down").click(function(event){
-         if(this.hash !== ""){
+                <div class="card" style="width: 18rem; height: 24rem; border-radius: 10px;">
+                  <h5 class="card-header" style="background-color: #18212b; color: whitesmoke;text-align: center;">Rp.<?= $data->harga_paket; ?></h5>
+                  <img src="../assets/img/<?= $data->gambar; ?>" class="card-img-top" style="height: 140px;">
 
-              event.preventDefault();
+                  <div class="card-body">
+                    <h5 class="card-title"><?= substr($data->nama_paket, 0, 20) ?>...</h5>
+                    <p class="card-text"><?= substr($data->ket_paket, 0, 70) ?>...</p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <div class="row">
+                      <div class="col">
+                        <p>ID : <?= $data->id_paket; ?></p>
+                      </div>
+                      <div class="col">
+                        <td></td>
+                        <a type="button" class="btn btn-primary" href="detail-paket.php?url-id=<?= $data->id_paket; ?>">Detail</a>
+                      </div>
+                    </div>
 
-              var hash=this.hash; 
 
-              $('html,body').animate({
-                scrollTop:$(hash).offset().top
-              },800 , function(){
-                 window.location.hash=hash;
-              });
+                  </div>
+                </div>
+              </div>
+            <?php
+            }
+            ?>
+            <!--  -->
 
-              // add active class in navigation
-              $(".nav ul li a").removeClass("active")
-              $(this).addClass("active")
-         }
-      })
-})
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact person -->
 
-</script>
-<script src="../gym-profil/js/wow.min.js"></script>
-<script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       0,
-      }
-    );
-    wow.init();
-</script>
+
+  <section class="container" style="color: whitesmoke;">
+<div class="row">
+    <div class="col center">
+      <h3 style="text-align: center;">Yuk Gabung Dengan Hary Gym Sekarang !</h3>
+     
+      <a style="display: flex;justify-content: center;width: 70px;align-items: center;margin: auto;" type="button" class="btn btn-success" href="registrasi-member.php">Join</a>
+      <br>
+      </div>
+      <hr>
+      <div class="info col-md-6">
+        <ul>
+          <li><span class="fa fa-map-marker"></span> Alamat : jl. lalu mesir no.10 cakranegara</li>
+          <hr>
+          <li><span class="fa fa-phone"></span> No.telp : 0878515123412</li>
+          <hr>
+          <li><span class="fa fa-envelope"></span> BUILD YOUR FIT BODY NOW IN HARY GYM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- bundel min js -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

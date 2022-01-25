@@ -1,44 +1,72 @@
 <?php
 require '../_header.php';
-if(!isset($_SESSION['login'])){
-    header('location:login.php');
+if (!isset($_SESSION['login'])) {
+  header('location:login.php');
 }
 ?>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
-                        <a href="" class="alert alert-info">Welcome <?= $_SESSION['fullname'];?> To GYM MEMBER </a>
-                    </div>
-                 </div>
+<a href="#menu-toggle" class="btn btn-outline-primary" id="menu-toggle"><i class="fas fa-bars"></i></a>
+
+<div class="card col-xl-6 bg-info" style="margin-top: 20px;">
+  <div class="card-body" style="text-align: center;">
+  <h5>Welcome <?= $_SESSION['username']; ?> To Website Gym </h5>
+  <a href=""></a>
+  </div>
+</div>
+
 <!-- content tengah -->
-<br><br>
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-3 mt-5">
-            <div class="alert alert-info">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
-              <div class="info-box-content">
-                <span class="info-box-text">Data Transaksi Gym</span>
-                  <a href="menuju-view-data-transaksi-gym" class="btn btn-sm btn-info float-left">View</a>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="alert alert-success mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+<br>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Profil Gym</span>
-                <a href="menuju-profil-gym" class="btn btn-sm btn-danger float-left">View</a>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-<!-- end content tengah  -->
 
-                    </div>
-                </div>
-<?php require '../_footer.php';?>
+
+<!--  -->
+<div class="row">
+  <div class="col-xl-3 col-sm-6 col-12 mb-4">
+    <div class="card bg-success" >
+      <div class="card-body">
+        <div class="d-flex justify-content-between px-md-1">
+          <div>
+            <h3 class="text-warning">PAKET</h3>
+            <a href="menuju-view-data-transaksi-gym" class="btn btn-sm btn-warning float-left">View</a>
+          </div>
+          <div class="align-self-center">
+         
+            <i class="fas fa-archive text-warning fa-3x"></i>
+          </div>
+        </div>
+        <div class="px-md-1">
+          <div class="progress mt-3 mb-1 rounded" style="height: 7px">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6 col-12 mb-4">
+    <div class="card bg-success">
+      <div class="card-body">
+        <div class="d-flex justify-content-between px-md-1">
+          <div>
+            <h3 class="text-warning">MEMBER</h3>
+            <a href="menuju-view-data-transaksi-gym" class="btn btn-sm btn-warning float-left">View</a>
+      
+           
+          </div>
+          <div class="align-self-center">
+         
+            <i class="fas fa-users text-warning fa-3x"></i>
+            
+          </div>
+        </div>
+        <div class="px-md-1">
+          <div class="progress mt-3 mb-1 rounded" style="height: 7px">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+
+
+<?php require '../_footer.php'; ?>

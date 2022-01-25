@@ -1,74 +1,75 @@
 <!-- index web_dasar by Arikk -->
+
 <?php
 require '../_header.php';
 
-if(!isset($_SESSION['login'])){
-header('location:../gym-profil/index.php');
+if (!isset($_SESSION['login'])) {
+    header('location:../gym-profil/index.php');
 }
 ?>
-    <h3 class="alert alert-info"> Welcome <b> <?= $_SESSION['fullname'];?> </b> To Data Paket Gym
-       
-    </h3>
-    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
-    <?php
-       if($_SESSION['role']=='admin'){
-       ?>
+<a href="#menu-toggle" class="btn btn-outline-primary" id="menu-toggle"><i class="fas fa-bars"></i></a>
+<?php
+if ($_SESSION['role'] == 'admin') {
+?>
     <a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Paket</a>
-    <?php 
-       }
-    ?>
-   
-    <br><br>
-<table class="table table-dark table-bordered border-primary" >
-<thead>
-    <tr>
-        <th>No</th>
-        <th>Id_Paket</th>
-        <th>Nama Paket</th>
-        <th>Keterangan</th>
-        <th>Harga</th>
-        <?php
-       if($_SESSION['role']=='admin'){
-       ?>
-        <th>Aksi</th>  
-        <?php
-       }
-        ?>
-    </tr>
+<?php
+}
+?>
+
+<br><br>
+<table class="table table-dark table-bordered border-primary">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Id_Paket</th>
+            <th>Nama Paket</th>
+            <th>Keterangan</th>
+            <th>Harga</th>
+            <th>Gambar</th>
+            <?php
+            if ($_SESSION['role'] == 'admin') {
+            ?>
+                <th>Aksi</th>
+            <?php
+            }
+            ?>
+        </tr>
     <tbody>
         <?php
         require '../conn.php';
         $query = "SELECT * FROM tb_paket";
-        $sql = mysqli_query($koneksi,$query);
+        $sql = mysqli_query($koneksi, $query);
         $no = 1;
         while ($data = mysqli_fetch_object($sql)) {
         ?>
-        <tr>
-        <td><?= $no++; ?></td>
-        <td><?= $data->id_paket; ?></td>
-        <td><?= $data->nama_paket; ?></td>
-        <td><?= $data->ket_paket; ?></td>
-        <td>Rp.<?= $data->harga_paket; ?></td>
+            <tr>
+                <td><?= $no++; ?></td>
+                <td><?= $data->id_paket; ?></td>
+                <td><?= $data->nama_paket; ?></td>
+                <td><?= $data->ket_paket; ?></td>
+                <td>Rp.<?= $data->harga_paket; ?></td>
+                <td><?= $data->gambar; ?></td>
+                <?php
+                if ($_SESSION['role'] == 'admin') {
+                ?>
+                    <td><a href="edit-paket.php?url-id=<?= $data->id_paket; ?>">
+                            <input type="submit" value="Edit" class="btn btn-warning">
+                        </a> <a href="hapus-paket.php?id_paket=<?= $data->id_paket; ?>">
+                            <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
+                        <?php
+                    }
+                        ?>
+                    </td>
+            </tr>
         <?php
-       if($_SESSION['role']=='admin'){
-       ?>
-       <td><a href="edit-paket.php?url-id=<?=$data->id_paket;?>">
-       <input type="submit" value="Edit" class="btn btn-warning" >
-    </a> <a href="hapus-paket.php?id_paket=<?= $data->id_paket;?>">
-       <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
-       <?php 
-       }
-       ?>
-    </td>
-    </tr>
-    <?php
         }
         ?>
     </tbody>
-</thead>
+    </thead>
 </table>
-    </div>
+</div>
 </body>
+
 </html>
 <?php
 require '../_footer.php';

@@ -22,7 +22,7 @@ if(!isset($_SESSION['login'])){
         //menampilan data dalam table
         if(isset($_GET['url-id'])){
             $input_id = $_GET['url-id'];
-            $query = "SELECT * FROM tb_user WHERE id_user ='$input_id'";
+            $query = "SELECT * FROM tb_member WHERE id_member ='$input_id'";
             $result = mysqli_query($koneksi,$query);
             $data = mysqli_fetch_object($result);
 
@@ -31,14 +31,13 @@ if(!isset($_SESSION['login'])){
        if(isset($_POST['simpan'])){
                     $input_id = $_POST['txtid'];
                     $txtusername = htmlspecialchars($_POST['txtusername']);
-                    $txtfullname = htmlspecialchars( $_POST['txtfullname']);
-                    $alamat = htmlspecialchars($_POST['alamat']);
+                    $txtpassword = htmlspecialchars($_POST['txtpassword']);
                     $no_telp = htmlspecialchars($_POST['no_telp']);
-                    $role = htmlspecialchars($_POST['role']);
+                 
         //update syntax dalam mysql
-                 $sql = "UPDATE tb_user SET 
-                         username='$txtusername', fullname='$txtfullname', alamat='$alamat',no_telp='$no_telp', role='$role'
-                         WHERE id_user = '$input_id'";
+                 $sql = "UPDATE tb_member SET 
+                         username='$txtusername', Password='$txtpassword', paket_dipilih='$txtpaket', no_telp='$no_telp'
+                         WHERE id_member = '$input_id'";
                  $result = mysqli_query($koneksi,$sql);
         //perulangan jika dia berhasil maka ke index dan data diperbarui
                 if($result)  {
@@ -50,24 +49,21 @@ if(!isset($_SESSION['login'])){
                 }
               ?>
 	  		<form action="" method="post">
-	  				<input type="hidden" name="txtid" id="username" class="form-control" value="<?=$data->id_user;?>" >
+	  				<input type="hidden" name="txtid" id="username" class="form-control" value="<?=$data->id_member;?>" >
 	  		    <div class="form-group">
 	  				<label for="username">Username</label>
 	  				<input type="text" name="txtusername" id="username" class="form-control" value="<?=$data->username;?>">
 	  			</div>
 	  			<div class="form-group">
-	  				<label for="fullname">Fullname</label>
-	  				<input type="text" name="txtfullname" id="fullname" class="form-control" value="<?=$data->fullname;?>">
+	  				<label for="paket">Paket Yang Dipilih : </label>
+	  				<input type="text" name="txtpaket_dipilih" id="paket" class="form-control" value="<?=$data->paket_dipilih;?>">
 	  			</div>
-	  				
-	  			<div class="form-group">
-	  				<label for="alamat">Alamat</label>
-	  				<textarea name="alamat" id="alamat" class="form-control"><?=$data->alamat;?></textarea>
-	  			</div>
+	  		
 	  			<div class="form-group">
 	  				<label for="telp">No. Telepon</label>
 	  				<input type="text" name="no_telp" id="telp" class="form-control" value="<?=$data->no_telp;?>">
 	  			</div>
+          <!-- 21 -->
                   <div class="form-group">
 	  				<label for="role">Role : </label>
 
