@@ -2,16 +2,15 @@
 require '../_header.php';
 ?>
 <div class="box">
-
 	<div class="pull-right">
 		<a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-		<a href="../member/data-member.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
+		
 	</div>
 	</h4>
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
 			<!--  -->
-			<h3 class="alert alert-info"> Registrasi Member</h3>
+			<h3 class="alert alert-info"> Tambah Member</h3>
 			<!--  -->
 			<?php
 			if (!isset($_SESSION['login'])) {
@@ -24,54 +23,57 @@ require '../_header.php';
 			//menambahkan htmlspecialchars
 			if (isset($_POST['simpan'])) {
 				$txtusername = htmlspecialchars($_POST['txtusername']);
-
-				$txtpassword = sha1(htmlspecialchars($_POST['txtpassword']));
-				$txtalamat = htmlspecialchars($_POST['txtalamat']);
+				$txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
 				$no_telp = htmlspecialchars($_POST['no_telp']);
-				$role = htmlspecialchars($_POST['role']);
-				$sql = "INSERT INTO tb_user VALUES (NULL,'$txtusername','$txtpassword','$txtalamat','$no_telp','$role')";
-				$query = mysqli_query($koneksi, $sql);
 
-				if ($query) {
+				$sql2 = "INSERT INTO tb_member VALUES (NULL,'$txtusername','$txtnama_paket','$no_telp')";
+				$query2 = mysqli_query($koneksi, $sql2);
+
+
+				if ($query2) {
 					header('location:data-member.php');
 				} else {
 					echo 'Query Error' . mysqli_error($koneksi);
 				}
 			}
+
+
 			?>
 			<!--  -->
 
 			<form action="" method="post">
 				<div class="form-group">
-					<label for="username">Username</label>
+					<label for="username">Username :</label>
 					<input type="text" name="txtusername" id="username" class="form-control" required autofocus>
 				</div>
+				
 				<div class="form-group">
-					<label for="fullname">Fullname</label>
-					<input type="text" name="txtfullname" id="fullname" class="form-control" required>
+					
+						<label for="namapaket">Paket Dipilih :</label>
+						
+						<select name="txtnama_paket" id="nama_paket" class="form-control" required>
+						<option value="">--Pilih--</option>
+						<?php 
+						$sql1 = "SELECT * FROM tb_paket";
+						$query1 = mysqli_query($koneksi, $sql1);						
+						while ($data = mysqli_fetch_object($query1)) { 
+						?>
+							<option value="<?= $data->nama_paket ?>"><?= $data->nama_paket ?></option>
+						<?php
+					}
+						?>
+
+						</select>
+					
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" name="txtpassword" id="password" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="alamat">Alamat</label>
-					<textarea name="txtalamat" id="alamat" class="form-control" required></textarea>
-				</div>
-				<div class="form-group">
-					<label for="telp">No. Telepon</label>
+					<label for="telp">No. Telepon :</label>
 					<input type="number" name="no_telp" id="telp" class="form-control" required>
 				</div>
-				<div class="form-group">
-					<label for="role">Role : </label>
-					<select name="role" id="role">
-						<option value="admin">Admin</option>
-						<option value="member">Member</option>
-					</select>
-				</div>
-
+				<br>
 				<div class="form-group pull-right">
 					<input type="submit" name="simpan" value="Simpan" class="btn btn-success">
+					<a type="button" class="btn btn-primary" href="index.php">Kembali</a>
 
 				</div>
 			</form>

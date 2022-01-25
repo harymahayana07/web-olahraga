@@ -31,12 +31,12 @@ if(!isset($_SESSION['login'])){
        if(isset($_POST['simpan'])){
                     $input_id = $_POST['txtid'];
                     $txtusername = htmlspecialchars($_POST['txtusername']);
-                    $txtpassword = htmlspecialchars($_POST['txtpassword']);
+                    $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
                     $no_telp = htmlspecialchars($_POST['no_telp']);
                  
         //update syntax dalam mysql
                  $sql = "UPDATE tb_member SET 
-                         username='$txtusername', Password='$txtpassword', paket_dipilih='$txtpaket', no_telp='$no_telp'
+                         username='$txtusername', nama_paket='$txtnama_paket', no_telp='$no_telp'
                          WHERE id_member = '$input_id'";
                  $result = mysqli_query($koneksi,$sql);
         //perulangan jika dia berhasil maka ke index dan data diperbarui
@@ -54,25 +54,32 @@ if(!isset($_SESSION['login'])){
 	  				<label for="username">Username</label>
 	  				<input type="text" name="txtusername" id="username" class="form-control" value="<?=$data->username;?>">
 	  			</div>
-	  			<div class="form-group">
-	  				<label for="paket">Paket Yang Dipilih : </label>
-	  				<input type="text" name="txtpaket_dipilih" id="paket" class="form-control" value="<?=$data->paket_dipilih;?>">
-	  			</div>
+          <div class="form-group">
+					
+          <label for="namapaket">Paket Dipilih :</label>
+          
+          <select name="txtnama_paket" id="nama_paket" class="form-control" required value="<?= $data->nama_paket; ?>">
+          <?php 
+          $sql1 = "SELECT * FROM tb_paket";
+          $query1 = mysqli_query($koneksi, $sql1);						
+          while ($data2 = mysqli_fetch_object($query1)) { 
+          ?>
+            <option value="<?= $data2->nama_paket; ?>"><?= $data2->nama_paket; ?></option>
+          <?php
+        }
+          ?>
+
+          </select>
+        
+      </div>
 	  		
 	  			<div class="form-group">
 	  				<label for="telp">No. Telepon</label>
-	  				<input type="text" name="no_telp" id="telp" class="form-control" value="<?=$data->no_telp;?>">
+	  				<input type="text" name="no_telp" id="telp" class="form-control" value="<?= $data->no_telp; ?>">
 	  			</div>
           <!-- 21 -->
-                  <div class="form-group">
-	  				<label for="role">Role : </label>
-
-                      <select name="role" id="cars" class="form-control">
-                     <option value="<?=$data->role;?>"><?=$data->role;?></option>
-                    </select>
-                     
-                     
-	  			</div>
+         
+                
 	  			<div class="form-group pull-right">
 	  				<input type="submit" name="simpan" value="Simpan Perubahan" class="btn btn-success">
 	  			

@@ -6,7 +6,7 @@ if(!isset($_SESSION['login'])){
 header('location:../gym-profil/index.php');
 }
 ?>
-    <h3 class="alert alert-info"> Welcome <b><?= $_SESSION['Username'];?></b> To Data Member Gym
+    <h3 class="alert alert-info"> Welcome <b><?= $_SESSION['username'];?></b> To Data Member Gym
        
     </h3>
     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Togglemenu</a>
@@ -23,7 +23,7 @@ header('location:../gym-profil/index.php');
     <tr>
         <th>No</th>
         <th>Username</th>
-        <th>Alamat</th>
+        <th>Nama_paket</th>
         <th>No_telp</th>
         <?php
        if($_SESSION['role']=='admin'){
@@ -44,15 +44,14 @@ header('location:../gym-profil/index.php');
         <tr>
         <td><?= $no++; ?></td>
         <td><?= $data->username; ?></td>
-        <td><?= $data->paket_dipilih; ?></td>
-
+        <td><?= $data->nama_paket; ?></td>
         <td><?= $data->no_telp; ?></td>
         <?php
        if($_SESSION['role']=='admin'){
        ?>
        <td><a href="edit-member.php?url-id=<?=$data->id_member;?>">
        <input type="submit" value="Edit" class="btn btn-warning" >
-    </a> <a href="hapus-member.php?id_user=<?= $data->id_member;?>">
+    </a> <a href="hapus-member.php?id_member=<?= $data->id_member;?>">
        <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
        
       <?php 

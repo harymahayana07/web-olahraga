@@ -48,11 +48,11 @@
               $txtpassword = htmlspecialchars($_POST['txtpassword']);
               $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
               $no_telp = htmlspecialchars($_POST['no_telp']);
-              $txtharga_paket = htmlspecialchars($_POST['txtharga_paket']);
+             
 
               // masukan ke database
               $sql = "INSERT INTO tb_member VALUES 
-					(NULL,'$txtusername','$txtpassword','$txtnama_paket','$no_telp','$txtharga_paket')";
+					(NULL,'$txtusername','$txtpassword','$txtnama_paket','$no_telp')";
 
               $query = mysqli_query($koneksi, $sql);
               //jika berhasil arahkan ke gym-profil-index		

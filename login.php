@@ -16,7 +16,6 @@ if (isset($_POST['login'])) {
         $data = mysqli_fetch_object($query);
         // ambil nilai dan masukan ke dalam session
         $_SESSION['login'] = true;
-
         $_SESSION['fullname'] = $data->fullname;
         $_SESSION['username'] = $data->username;
         $_SESSION['role'] = $data->role;
@@ -53,7 +52,6 @@ if (isset($_POST['login'])) {
     <style>
         body {
             background-image: url("assets/img/home.jpg");
-
         }
 
         .login-form {
