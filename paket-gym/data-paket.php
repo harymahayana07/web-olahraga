@@ -8,13 +8,9 @@ if (!isset($_SESSION['login'])) {
 }
 ?>
 <a href="#menu-toggle" class="btn btn-outline-primary" id="menu-toggle"><i class="fas fa-bars"></i></a>
-<?php
-if ($_SESSION['role'] == 'admin') {
-?>
-    <a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Paket</a>
-<?php
-}
-?>
+
+<a href="./tambah-paket.php" class="btn btn-info"><i class="fas fa-plus-circle"></i> Tambah Paket</a>
+
 
 <br><br>
 <table class="table table-bordered border-primary">
@@ -26,13 +22,9 @@ if ($_SESSION['role'] == 'admin') {
             <th>Keterangan</th>
             <th>Harga</th>
             <th>Gambar</th>
-            <?php
-            if ($_SESSION['role'] == 'admin') {
-            ?>
+          
                 <th>Aksi</th>
-            <?php
-            }
-            ?>
+           
         </tr>
     <tbody>
         <?php
@@ -49,17 +41,17 @@ if ($_SESSION['role'] == 'admin') {
                 <td><?= $data->ket_paket; ?></td>
                 <td>Rp.<?= $data->harga_paket; ?></td>
                 <td><?= $data->gambar; ?></td>
-                <?php
-                if ($_SESSION['role'] == 'admin') {
-                ?>
-                    <td><a href="edit-paket.php?url-id=<?= $data->id_paket; ?>">
-                            <input type="submit" value="Edit" class="btn btn-warning">
-                        </a> <a href="hapus-paket.php?id_paket=<?= $data->id_paket; ?>">
-                            <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
+                <td><a href="edit-paket.php?url-id=<?= $data->id_paket; ?>">
+                        <input type="submit" value="Edit" class="btn btn-warning"> </a>
                         <?php
-                    }
+                        if ($_SESSION['role'] == 'admin') {
                         ?>
-                    </td>
+                    <a href="hapus-paket.php?id_paket=<?= $data->id_paket; ?>">
+                        <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
+                    <?php
+                        }
+                    ?>
+                </td>
             </tr>
         <?php
         }

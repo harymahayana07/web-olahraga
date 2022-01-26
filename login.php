@@ -23,23 +23,8 @@ if (isset($_POST['login'])) {
         header('location:dashboard/index.php');
         // jika salah maka munculkan pop up login gagal, username/password salah
     } else {
-?>
-
-
-        <div class="col-lg-5" style="color: whitesmoke;">
-            <div class="alert alert-info alert-dismissable" role="alert">
-                <a href="login.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <span class="" aria-hidden="true"></span>
-                <strong>Login gagal!</strong> Username / Password salah
-            </div>
-        </div>
-
-
-
-<?php
-        // end else
     }
-    // endphp
+    //    echo $error = 'Username atau password yang anda masukan salah';
 }
 ?>
 <!DOCTYPE html>
@@ -49,80 +34,56 @@ if (isset($_POST['login'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login Hary Gym</title>
-    <!-- Bootstrap Core CSS -->
-    <!-- internal css -->
+    <link rel="stylesheet" href="../web-olahraga/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+   <link rel="stylesheet" type="text/css" href="../web-olahraga/assets/Parsley.js-2.9.2/src/parsley.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://parsleyjs.org/src/parsley.css"> -->
+    
+    <script src="../web-olahraga/assets/js/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+
+    <script src="../web-olahraga/assets/Parsley.js-2.9.2/dist/parsley.min.js"></script>
+    <!-- <script src="https://parsleyjs.org/dist/parsley.min.js"></script> -->
+
+    <script src="../web-olahraga/assets/Parsley.js-2.9.2/dist/i18n/id.js"></script>
+    <!-- <script src="https://parsleyjs.org/dist/i18n/id.js"></script> -->
+
     <style>
-        body {
+body {
             background-image: url("assets/img/home.jpg");
         }
 
-        .login-form {
-            margin-top: 120px;
-            width: 340px;
-            margin-left: auto;
-            margin-bottom: auto;
-            margin-right: auto;
-            font-size: 15px;
-            align-items: center;
-
-        }
-
-        .login-form form {
-            margin-bottom: 15px;
-            background: #f7f7f7;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-            border-radius: 30px;
-        }
-
-        .login-form h2 {
-            margin: 0 0 15px;
-        }
-
-        .form-control {
-            min-height: 38px;
-            border-radius: 5px;
-            width: 250px;
-            background-color: #95d2e8;
-
-        }
-
-        .btn {
-            font-size: 15px;
-            font-weight: bold;
-            min-height: 38px;
-            border-radius: 12px;
-            background-color: #193fd4;
-        }
     </style>
 </head>
 
 <body>
-    <script src="../assets/js/jquery.js"></script>
-    <!-- validasi parsley -->
-    <script src="../assets/Parsley.js-2.9.2/dist/parsley.min.js"></script>
-    <!-- memunculkan error/kesalahan parsley dengan bahasa indonesia -->
-    <script src="../assets/Parsley.js-2.9.2/dist/i18n/id.js"></script>
-    <!-- form login -->
-    <div class="login-form ">
-        <form action="" method="post" data-parsley-validate>
-            <h2 style="text-align: center;">LOGIN</h2>
-            <div class="form-group py-2">
-                <input type="text" name="txtusername" class="form-control" placeholder="Enter Username " required  autocomplete data-parsley-length="[6, 10]"  >
+    <div class="container-fluid vh-100">
+        <div class="" style="margin-top:50px">
+            <div class="rounded d-flex justify-content-center">
+                <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light" style="border-radius: 30px;">
+                    <div class="text-center">
+                        <h3 class="text-primary">LOGIN HARY GYM</h3>
+                    </div>
+                    <hr>
+                    <form method="Post" id="form" data-parsley-validate>
+                        <div class="form-group">
+                            <label for="text">Username</label>
+                            <input type="text" class="form-control" name="txtusername" placeholder="Enter Username" required data-parsley-length="[4, 12]">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="txtpassword" placeholder="Enter Password" required data-parsley-length="[4, 12]">
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="submit" id="submit" name="login" value="Login" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
             </div>
-            <br>
-            <div class="form-group py-2">
-                <input type="password" name="txtpassword" class="form-control" placeholder="Enter Password" required  data-parsley-length="[6, 12]" data-parsley-trigger="keyup">
-            </div>
-            <br>
-            <div class="form-group">
-                <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
-            </div>
-        </form>
+        </div>
     </div>
-    <!-- end form login -->
-    <script src="../web-olahraga/assets/js/jquery.js"></script>
-    <script src="../web-olahraga/assets/js/bootstrap.min.js"></script>
 </body>
-
+<script>
+    $('#form').parsley();
+</script>
 </html>
