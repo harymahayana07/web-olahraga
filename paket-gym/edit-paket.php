@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 
   <div class="pull-right">
     <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-  
+
   </div>
 
   <div class="row">
@@ -67,10 +67,10 @@ if (!isset($_SESSION['login'])) {
           <input type="text" name="txtharga_paket" id="harga" class="form-control" value="Rp.<?= $data->harga_paket; ?>">
         </div>
         <div class="form-group">
-					<label for="gambar">Gambar Paket</label>
-					<input type="file" name="file_gambar" id="gambar" class="form-control">
+          <label for="gambar">Gambar Paket</label>
+          <input type="file" name="file_gambar" id="gambar" class="form-control">
           <label>Gambar File Saat Ini : <?= $data->gambar; ?></label>
-				</div>
+        </div>
         <br>
         <div class="form-group pull-right">
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">

@@ -22,9 +22,7 @@ if (!isset($_SESSION['login'])) {
             <th>Keterangan</th>
             <th>Harga</th>
             <th>Gambar</th>
-          
-                <th>Aksi</th>
-           
+            <th>Aksi</th>
         </tr>
     <tbody>
         <?php
@@ -43,14 +41,14 @@ if (!isset($_SESSION['login'])) {
                 <td><?= $data->gambar; ?></td>
                 <td><a href="edit-paket.php?url-id=<?= $data->id_paket; ?>">
                         <input type="submit" value="Edit" class="btn btn-warning"> </a>
-                        <?php
-                        if ($_SESSION['role'] == 'admin') {
-                        ?>
-                    <a href="hapus-paket.php?id_paket=<?= $data->id_paket; ?>">
-                        <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
                     <?php
-                        }
+                    if ($_SESSION['role'] == 'admin') {
                     ?>
+                        <a href="hapus-paket.php?id_paket=<?= $data->id_paket; ?>">
+                            <input type="submit" value="Hapus" class="btn btn-danger" onclick="return confirm('Yakin Hapus Data?')">
+                        <?php
+                    }
+                        ?>
                 </td>
             </tr>
         <?php

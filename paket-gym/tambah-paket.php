@@ -5,14 +5,11 @@ require '../_header.php';
 
 	<div class="pull-right">
 		<a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-
 	</div>
 	</h4>
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
-			<!--  -->
 			<h3 class="alert alert-info"> Tambah Data Paket Gym</h3>
-			<!--  -->
 			<?php
 			if (!isset($_SESSION['login'])) {
 				header('location:login.php');
