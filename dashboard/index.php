@@ -25,8 +25,8 @@ if (!isset($_SESSION['login'])) {
       <div class="card-body">
         <div class="d-flex justify-content-between px-md-1">
           <div>
-            <h3 class="text-warning">PAKET</h3>
-            <a href="menuju-view-data-transaksi-gym" class="btn btn-sm btn-warning float-left">View</a>
+            <h3 class="text-dark">PAKET</h3>
+            <a href="../paket-gym/data-paket.php" class="btn btn-sm btn-warning float-left">View</a>
           </div>
           <div class="align-self-center">
          
@@ -46,8 +46,8 @@ if (!isset($_SESSION['login'])) {
       <div class="card-body">
         <div class="d-flex justify-content-between px-md-1">
           <div>
-            <h3 class="text-warning">MEMBER</h3>
-            <a href="menuju-view-data-transaksi-gym" class="btn btn-sm btn-warning float-left">View</a>
+            <h3 class="text-dark">MEMBER</h3>
+            <a href="../member/data-member.php" class="btn btn-sm btn-warning float-left">View</a>
       
            
           </div>

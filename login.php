@@ -24,15 +24,18 @@ if (isset($_POST['login'])) {
         // jika salah maka munculkan pop up login gagal, username/password salah
     } else {
 ?>
-        <div class="row">
-            <div class="col-lg-6 mx-auto">
-                <div class="alert alert-info alert-dismissable" role="alert">
-                    <a href="login.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    <strong>Login gagal!</strong> Username / Password salah
-                </div>
+
+
+        <div class="col-lg-5" style="color: whitesmoke;">
+            <div class="alert alert-info alert-dismissable" role="alert">
+                <a href="login.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <span class="" aria-hidden="true"></span>
+                <strong>Login gagal!</strong> Username / Password salah
             </div>
         </div>
+
+
+
 <?php
         // end else
     }
@@ -46,8 +49,7 @@ if (isset($_POST['login'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login Hary Gym</title>
-    <link rel="stylesheet" href="../assets/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- Bootstrap Core CSS -->
     <!-- internal css -->
     <style>
         body {
@@ -96,15 +98,21 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
+    <script src="../assets/js/jquery.js"></script>
+    <!-- validasi parsley -->
+    <script src="../assets/Parsley.js-2.9.2/dist/parsley.min.js"></script>
+    <!-- memunculkan error/kesalahan parsley dengan bahasa indonesia -->
+    <script src="../assets/Parsley.js-2.9.2/dist/i18n/id.js"></script>
+    <!-- form login -->
     <div class="login-form ">
-        <form action="" method="post">
+        <form action="" method="post" data-parsley-validate>
             <h2 style="text-align: center;">LOGIN</h2>
             <div class="form-group py-2">
-                <input type="text" name="txtusername" class="form-control" placeholder="Enter Username " required="required" autocomplete>
+                <input type="text" name="txtusername" class="form-control" placeholder="Enter Username " required  autocomplete data-parsley-length="[6, 10]"  >
             </div>
             <br>
             <div class="form-group py-2">
-                <input type="password" name="txtpassword" class="form-control" placeholder="Enter Password" required="required">
+                <input type="password" name="txtpassword" class="form-control" placeholder="Enter Password" required  data-parsley-length="[6, 12]" data-parsley-trigger="keyup">
             </div>
             <br>
             <div class="form-group">
@@ -112,6 +120,7 @@ if (isset($_POST['login'])) {
             </div>
         </form>
     </div>
+    <!-- end form login -->
     <script src="../web-olahraga/assets/js/jquery.js"></script>
     <script src="../web-olahraga/assets/js/bootstrap.min.js"></script>
 </body>

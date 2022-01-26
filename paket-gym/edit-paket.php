@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 
   <div class="pull-right">
     <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-    <a href="data-paket.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
+  
   </div>
 
   <div class="row">
@@ -32,9 +32,10 @@ if (!isset($_SESSION['login'])) {
         $txtnama_paket = htmlspecialchars($_POST['txtnama_paket']);
         $txtket_paket = htmlspecialchars($_POST['txtket_paket']);
         $txtharga_paket = htmlspecialchars($_POST['txtharga_paket']);
+        $file_gambar = htmlspecialchars($_POST['file_gambar']);
         //update syntax dalam mysql
         $sql = "UPDATE tb_paket SET 
-                        id_paket='$input_id', nama_paket='$txtnama_paket', ket_paket='$txtket_paket', harga_paket='$txtharga_paket'
+                id_paket='$input_id', nama_paket='$txtnama_paket', ket_paket='$txtket_paket', gambar='$file_gambar'
                          WHERE id_paket = '$input_id'";
         $result = mysqli_query($koneksi, $sql);
         //perulangan jika dia berhasil maka ke index dan data diperbarui
@@ -65,9 +66,15 @@ if (!isset($_SESSION['login'])) {
           <label for="harga">Harga Paket</label>
           <input type="text" name="txtharga_paket" id="harga" class="form-control" value="Rp.<?= $data->harga_paket; ?>">
         </div>
-
+        <div class="form-group">
+					<label for="gambar">Gambar Paket</label>
+					<input type="file" name="file_gambar" id="gambar" class="form-control">
+          <label>Gambar File Saat Ini : <?= $data->gambar; ?></label>
+				</div>
+        <br>
         <div class="form-group pull-right">
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
+          <a href="data-paket.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
 
         </div>
       </form>

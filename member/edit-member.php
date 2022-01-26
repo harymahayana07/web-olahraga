@@ -11,7 +11,7 @@ if(!isset($_SESSION['login'])){
 	 
 		<div class="pull-right">
 			<a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
-			<a href="data-member.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
+		
 		</div>
 	 
 	      <div class="row">
@@ -78,10 +78,11 @@ if(!isset($_SESSION['login'])){
 	  				<input type="text" name="no_telp" id="telp" class="form-control" value="<?= $data->no_telp; ?>">
 	  			</div>
           <!-- 21 -->
-         
+         <br>
                 
 	  			<div class="form-group pull-right">
 	  				<input type="submit" name="simpan" value="Simpan Perubahan" class="btn btn-success">
+            <a href="data-member.php" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-chevron-left"></i>Kembali</a>
 	  			
 	  					</div>
 	  				</form>

@@ -73,7 +73,7 @@ require '../_header.php';
 				<br>
 				<div class="form-group pull-right">
 					<input type="submit" name="simpan" value="Simpan" class="btn btn-success">
-					<a type="button" class="btn btn-primary" href="index.php">Kembali</a>
+					<a type="button" class="btn btn-primary" href="data-member.php">Kembali</a>
 
 				</div>
 			</form>

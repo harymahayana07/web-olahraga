@@ -17,7 +17,7 @@ if ($_SESSION['role'] == 'admin') {
 ?>
 
 <br><br>
-<table class="table table-dark table-bordered border-primary">
+<table class="table table-bordered border-primary">
     <thead>
         <tr>
             <th>No</th>
